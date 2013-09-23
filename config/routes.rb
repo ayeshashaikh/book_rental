@@ -1,4 +1,7 @@
 BookRental::Application.routes.draw do
+  resources :books
+
+
   devise_for :users do
     delete "/users/sign_out" => "devise/sessions#destroy"
   end  

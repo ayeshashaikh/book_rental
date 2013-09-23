@@ -1,0 +1,29 @@
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put, :class => "form-signin"}) do |f| %>
+  <%= devise_error_messages! %>
+	<h2 class="form-signin-heading">Edit <%= resource_name.to_s.humanize %></h2>
+  <%= f.email_field :email, :autofocus => true, :class => "input-block-level", :placeholder => "Email Address" %>	
+  <%= f.text_field :first_name, :class => "input-block-level", :placeholder => "First Name" %> 
+  <%= f.text_field :last_name, :class => "input-block-level", :placeholder => "Last Name" %> 
+  <%= f.text_field :address, :class => "input-block-level", :placeholder => "Address" %> 
+  <%= f.text_field :phone_number, :class => "input-block-level", :placeholder => "Phone Number" %> 
+
+  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+    <div class="well well-small">Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+  <% end %>
+
+  <p class="text-error">(leave blank if you don't want to change it)</p>
+  <%= f.password_field :password, :autocomplete => "off", :class => "input-block-level", :placeholder => "Password"%>
+  <%= f.password_field :password_confirmation, :class => "input-block-level", :placeholder => "Password Confirmation"%>
+
+  <p class="text-error">(we need your current password to confirm your changes)</p>
+  <%= f.password_field :current_password, :class => "input-block-level", :placeholder => "Current Password" %>
+
+  <div class="well well-small"><%= f.submit "Update", :class => "btn btn-primary" %></div>
+<% end %>
+<div class="form-signin">
+	<div class="well well-small">
+		<h3 class="text-error">Cancel my account</h3>
+<p class="text-error"><%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete , :class => "btn btn-danger"%></p>
+	</div>
+<%= link_to "Back", :back, :class => "btn btn-primary" %>
+</div>
