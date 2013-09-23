@@ -15,7 +15,7 @@ development:
   database: book_rental_development
   pool: 5
   username: root
-  password:
+  password: dbsql
   socket: /tmp/mysql.sock
 
 # Warning: The database defined as "test" will be erased and
@@ -28,7 +28,7 @@ test:
   database: book_rental_test
   pool: 5
   username: root
-  password:
+  password: dbsql
   socket: /tmp/mysql.sock
 
 production:
