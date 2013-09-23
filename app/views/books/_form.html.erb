@@ -14,26 +14,26 @@
 	<%= f.hidden_field :user_id, :value => current_user.id%>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name %>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :price %><br />
+    <%= f.label :price %>
     <%= f.text_field :price %>
   </div>
   <div class="field">
-    <%= f.label :author %><br />
+    <%= f.label :author %>
     <%= f.text_field :author %>
   </div>
   <div class="field">
-    <%= f.label :branch %><br />
+    <%= f.label :branch %>
     <%= f.text_field :branch %>
   </div>
   <div class="field">
-    <%= f.label :publication %><br />
+    <%= f.label :publication %>
     <%= f.text_field :publication %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Submit", :class => "btn btn-large btn-success" %>
   </div>
 <% end %>
